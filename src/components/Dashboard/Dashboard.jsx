@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import styled from 'styled-components';
 
 const DashboardContainer = styled.div`
@@ -9,10 +10,31 @@ const DashboardContainer = styled.div`
 `;
 
 const Dashboard = () => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    // Fetch data from an API
+    axios.get('/api/dashboard')
+      .then(response => {
+        setData(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching dashboard data:', error);
+      });
+  }, []);
+
   return (
     <DashboardContainer>
       <h1 style={{ fontSize: '24px', fontWeight: 'bold' }}>Dashboard</h1>
-      {/* Add dashboard functionalities here */}
+      {data ? (
+        <div>
+          <p>Total Sales: {data.totalSales}</p>
+          <p>New Customers: {data.newCustomers}</p>
+          <p>Pending Orders: {data.pendingOrders}</p>
+        </div>
+      ) : (
+        <p>Loading...</p>
+      )}
     </DashboardContainer>
   );
 };
