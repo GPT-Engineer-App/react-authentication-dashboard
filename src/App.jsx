@@ -14,6 +14,10 @@ import Settings from './components/Settings/Settings';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
 import GlobalStyle from './styles/global';
+import Dashboard from './components/Dashboard/Dashboard';
+import Leads from './components/Leads/Leads';
+import Customers from './components/Customers/Customers';
+import Inventory from './components/Inventory/Inventory';
 
 function App() {
   return (
@@ -34,6 +38,10 @@ function App() {
           <Route path="/to-do-list" element={<ToDoList />} />
           <Route path="/profile" element={<UserProfile />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/leads" element={<Leads />} />
+          <Route path="/customers" element={<Customers />} />
+          <Route path="/inventory" element={<Inventory />} />
         </Routes>
       </div>
     </Router>
