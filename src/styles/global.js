@@ -5,15 +5,15 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #101FF8;
+    background-color: #1A1A1A;
     color: #FFFFFF;
   }
 
   a {
-    color: #FCE63B;
+    color: #FF6600;
     text-decoration: none;
     &:hover {
-      color: #FC2427;
+      color: #FF9900;
     }
   }
 `;

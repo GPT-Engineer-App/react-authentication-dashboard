@@ -6,7 +6,7 @@ const NavbarContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
+  background: #242424;
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
@@ -15,11 +15,11 @@ const NavbarContainer = styled.nav`
 const Navbar = () => {
   return (
     <NavbarContainer>
-      <h1>App Name</h1>
+      <h1 style={{ color: '#FFFFFF' }}>App Name</h1>
       <div>
-        <a href="/dashboard">Dashboard</a>
-        <a href="/profile">Profile</a>
-        <a href="/settings">Settings</a>
+        <a href="/dashboard" style={{ color: '#FFFFFF', marginRight: '20px' }}>Dashboard</a>
+        <a href="/profile" style={{ color: '#FFFFFF', marginRight: '20px' }}>Profile</a>
+        <a href="/settings" style={{ color: '#FFFFFF' }}>Settings</a>
       </div>
     </NavbarContainer>
   );

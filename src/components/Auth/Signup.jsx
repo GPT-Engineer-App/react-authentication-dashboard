@@ -7,8 +7,7 @@ const SignupContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: #242424;
 `;
 
 const SignupForm = styled.form`
@@ -18,7 +17,7 @@ const SignupForm = styled.form`
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.9);
+  background: #1A1A1A;
 `;
 
 const Input = styled.input`
@@ -26,18 +25,19 @@ const Input = styled.input`
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.8);
+  background: #242424;
+  color: #FFFFFF;
 `;
 
 const Button = styled.button`
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #FC2427;
+  background-color: #FF6600;
   color: white;
   cursor: pointer;
   &:hover {
-    background-color: #FCE63B;
+    background-color: #FF9900;
   }
 `;
 
@@ -45,7 +45,7 @@ const Signup = () => {
   return (
     <SignupContainer>
       <SignupForm>
-        <h2>Signup</h2>
+        <h2 style={{ fontSize: '24px', fontWeight: 'bold', color: '#FFFFFF' }}>Signup</h2>
         <Input type="email" placeholder="Email" required />
         <Input type="password" placeholder="Password" required />
         <Button type="submit">Signup</Button>

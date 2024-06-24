@@ -3,15 +3,15 @@ import styled from 'styled-components';
 
 const DashboardContainer = styled.div`
   padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: #242424;
   min-height: 100vh;
+  color: #FFFFFF;
 `;
 
 const ManagerDashboard = () => {
   return (
     <DashboardContainer>
-      <h1>Manager Dashboard</h1>
+      <h1 style={{ fontSize: '24px', fontWeight: 'bold' }}>Manager Dashboard</h1>
       {/* Add components and data visualizations here */}
     </DashboardContainer>
   );
