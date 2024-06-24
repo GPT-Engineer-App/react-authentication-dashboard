@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaHome, FaUsers, FaChartLine, FaBox } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const SidebarContainer = styled.div`
   width: 250px;
@@ -26,22 +27,30 @@ const SidebarItem = styled.div`
 const Sidebar = () => {
   return (
     <SidebarContainer>
-      <SidebarItem>
-        <FaHome style={{ marginRight: '10px' }} />
-        <span>Dashboard</span>
-      </SidebarItem>
-      <SidebarItem>
-        <FaUsers style={{ marginRight: '10px' }} />
-        <span>Leads</span>
-      </SidebarItem>
-      <SidebarItem>
-        <FaChartLine style={{ marginRight: '10px' }} />
-        <span>Customers</span>
-      </SidebarItem>
-      <SidebarItem>
-        <FaBox style={{ marginRight: '10px' }} />
-        <span>Inventory</span>
-      </SidebarItem>
+      <Link to="/dashboard" style={{ textDecoration: 'none' }}>
+        <SidebarItem>
+          <FaHome style={{ marginRight: '10px' }} />
+          <span>Dashboard</span>
+        </SidebarItem>
+      </Link>
+      <Link to="/leads" style={{ textDecoration: 'none' }}>
+        <SidebarItem>
+          <FaUsers style={{ marginRight: '10px' }} />
+          <span>Leads</span>
+        </SidebarItem>
+      </Link>
+      <Link to="/customers" style={{ textDecoration: 'none' }}>
+        <SidebarItem>
+          <FaChartLine style={{ marginRight: '10px' }} />
+          <span>Customers</span>
+        </SidebarItem>
+      </Link>
+      <Link to="/inventory" style={{ textDecoration: 'none' }}>
+        <SidebarItem>
+          <FaBox style={{ marginRight: '10px' }} />
+          <span>Inventory</span>
+        </SidebarItem>
+      </Link>
     </SidebarContainer>
   );
 };
